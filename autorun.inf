@@ -1,0 +1,4 @@
+[Autorun]
+open=run_encryption.bat
+action=Run Encryption Script
+icon=path_to_icon.ico
